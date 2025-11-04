@@ -30,15 +30,17 @@ button {
     cursor: pointer;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== BASE ===== */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #ffffff;
+}
+
 .container {
     max-width: 1158px;
     padding: 0 15px;
     margin: 0 auto;
-}
-
-.section {
-    padding: 120px 0;
 }
 
 /* ===== HEADER ===== */
@@ -50,6 +52,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .header-logo {
@@ -66,29 +73,26 @@ button {
     color: #2e2f42;
 }
 
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
 .header-menu {
     display: flex;
     gap: 40px;
 }
 
-.header-menu a {
+.header-link {
+    display: block;
+    padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     color: #2e2f42;
-    padding: 24px 0;
 }
 
-.header-menu a:hover,
-.header-menu a:focus {
+.header-link:hover,
+.header-link:focus {
     color: #404bbf;
 }
 
-/* ===== ADDRESS ===== */
 .header-address {
     font-style: normal;
 }
@@ -98,13 +102,15 @@ button {
     gap: 40px;
 }
 
-.header-contacts a {
-    color: #434455;
+.header-contact {
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
-.header-contacts a:hover,
-.header-contacts a:focus {
+.header-contact:hover,
+.header-contact:focus {
     color: #404bbf;
 }
 
@@ -116,7 +122,7 @@ button {
 }
 
 .hero-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -126,18 +132,18 @@ button {
 }
 
 .hero-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
     background-color: #4d5ae5;
-    color: #fff;
+    color: #ffffff;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    border: none;
-    border-radius: 4px;
-    min-width: 169px;
-    height: 56px;
-    display: block;
-    margin: 0 auto;
 }
 
 .hero-button:hover,
@@ -146,6 +152,10 @@ button {
 }
 
 /* ===== ADVANTAGES ===== */
+.advantages {
+    padding: 120px 0;
+}
+
 .advantages-list {
     display: flex;
     gap: 24px;
@@ -158,22 +168,26 @@ button {
 .advantages-title {
     font-size: 20px;
     font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .advantages-text {
-    color: #434455;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* ===== TEAM ===== */
-.our-team {
+.team {
+    padding: 120px 0;
     background-color: #f4f4fd;
 }
 
-.our-team-title {
+.team-title {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -190,34 +204,41 @@ button {
 }
 
 .team-item {
-    background-color: #fff;
-    border-radius: 0 0 4px 4px;
+    background-color: #ffffff;
     flex-basis: calc((100% - 3 * 24px) / 4);
+    border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
         0 1px 1px rgba(46, 47, 66, 0.16),
         0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.team-info {
-    text-align: center;
+.team-card {
     padding: 32px 0;
+    text-align: center;
 }
 
 .team-name {
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
     line-height: 1.2;
+    letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .team-role {
-    color: #434455;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* ===== PORTFOLIO ===== */
-.our-portfolio-title {
+.portfolio {
+    padding: 120px 0;
+}
+
+.portfolio-title {
     text-align: center;
     font-size: 36px;
     font-weight: 700;
@@ -246,15 +267,19 @@ button {
 }
 
 .portfolio-name {
-    font-weight: 500;
     font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
 }
 
 .portfolio-category {
-    color: #434455;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 /* ===== FOOTER ===== */
@@ -274,15 +299,16 @@ button {
     text-transform: uppercase;
 }
 
-.footer-logo span {
+.footer-logo-accent {
     color: #f4f4fd;
 }
 
 .footer-text {
-    color: #f4f4fd;
     max-width: 264px;
-    line-height: 1.5;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
 }
 
 /* ===== VISUALLY HIDDEN ===== */
